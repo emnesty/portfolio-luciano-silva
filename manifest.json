@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "LinkedIn Cookie Capture",
+  "version": "1.0",
+  "description": "Captura o cookie 'li_at' do LinkedIn e permite copiá-lo rapidamente.",
+  "permissions": ["activeTab", "declarativeContent", "cookies", "*://*.linkedin.com/*"],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "48": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}

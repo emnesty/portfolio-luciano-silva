@@ -1,0 +1,66 @@
+.container {
+  max-width: 1260px;
+  .s-hero {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left-container {
+      .name {
+        display: flex;
+        height: 31px;
+        gap: 8px;
+        .myname {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 28px;
+          letter-spacing: -0.02em;
+          color: var(--primary700);
+        }
+      }
+      .bio {
+        margin-top: 16px;
+        width: 100%;
+        .bio-text {
+          width: 100%;
+          max-width: 589px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 36px;
+          letter-spacing: -0.02em;
+          color: var(--gray900);
+        }
+      }
+      ul {
+        padding-top: 16px;
+        display: flex;
+        gap: 12px;
+        li {
+          a {
+            color: #6e6d7a;
+            height: 24px;
+            transition: background-color 0.3s;
+            border-radius: 50%;
+            padding: 20px 8px;
+            display: flex;
+            align-items: center;
+            &:hover {
+              background-color: #d9d9e06d;
+            }
+          }
+        }
+      }
+    }
+    .right-container {
+      .right-content {
+        .image {
+          width: 100%;
+          max-width: 374px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
