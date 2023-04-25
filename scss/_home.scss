@@ -1,6 +1,7 @@
 .container {
   max-width: 1260px;
   .s-hero {
+    margin-bottom: 26px;
     padding-top: 50px;
     display: flex;
     align-items: center;
@@ -62,5 +63,54 @@
         }
       }
     }
+  }
+  .text {
+    width: 100%;
+    max-width: 1230px;
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--gray900);
+      margin-bottom: 8px;
+    }
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--gray500);
+    }
+  }
+  .card-project {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    &:hover {
+      .image {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+    .image {
+      width: 100%;
+      height: 250px;
+      background-color: #d9d9d9;
+      border-radius: 10px;
+      margin-top: 32px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        transition: transform 0.3s ease-in;
+      }
+    }
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px 36px;
+    animation: fadeUp 0.4s forwards;
   }
 }
