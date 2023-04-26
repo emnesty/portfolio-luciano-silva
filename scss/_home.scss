@@ -1,5 +1,4 @@
 .container {
-  max-width: 1260px;
   .s-hero {
     margin-bottom: 26px;
     padding-top: 50px;
@@ -21,7 +20,6 @@
       }
       .bio {
         margin-top: 16px;
-        width: 100%;
         .bio-text {
           width: 100%;
           max-width: 589px;
@@ -46,7 +44,7 @@
             display: flex;
             align-items: center;
             &:hover {
-              background-color: #dedee66d;
+              background-color: #d9d9e06d;
             }
           }
         }
@@ -65,8 +63,6 @@
     }
   }
   .text {
-    width: 100%;
-    max-width: 1230px;
     h1 {
       font-style: normal;
       font-weight: 700;
@@ -112,5 +108,16 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 16px 36px;
     animation: fadeUp 0.4s forwards;
+  }
+  @include responsive(375px) {
+    .right-content {
+      .image {
+        opacity: 0;
+      }
+    }
+    .bio-text {
+      max-width: 460px;
+      font-size: 42px;
+    }
   }
 }
