@@ -80,9 +80,6 @@
     }
   }
   .card-project {
-    display: block;
-    width: 100%;
-    max-width: 280px;
     &:hover {
       .image {
         img {
@@ -109,15 +106,53 @@
     grid-gap: 16px 36px;
     animation: fadeUp 0.4s forwards;
   }
-  @include responsive(375px) {
-    .right-content {
-      .image {
-        opacity: 0;
+}
+
+@include responsive(375px) {
+  .right-content {
+    .image {
+      opacity: 0;
+    }
+  }
+  .container {
+    .cards {
+      justify-content: center;
+      align-items: center;
+    }
+    width: 360px !important;
+    .cards {
+      display: flex;
+      flex-direction: column;
+    }
+    .text {
+      margin-top: 32px !important;
+      padding-top: 32px !important;
+    }
+    .s-hero {
+      padding-top: 0px;
+      margin-bottom: -60px;
+      .left-container {
+        margin-bottom: 32px;
+        .bio {
+          width: 350px !important;
+          margin-bottom: 32px;
+          margin-top: 32px;
+          .bio-text {
+            max-width: 315px;
+            font-size: 29px;
+          }
+        }
       }
     }
-    .bio-text {
-      max-width: 460px;
-      font-size: 42px;
+    .s-hero {
+      .left-container {
+        .name {
+          margin-top: 32px;
+          .myname {
+            font-size: 25px;
+          }
+        }
+      }
     }
   }
 }
