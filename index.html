@@ -14,12 +14,15 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <title>Luciano Silva - UI/UX Designer - Front-End Developer</title>
   </head>
   <body>
     <div class="container">
-      <div class="s-hero">
-        <div class="left-container">
+      <section class="s-hero">
+        <div class="left-container" data-aos="fade-right">
           <div class="name">
             <img src="img/Avatar.png" alt="Profile Picture" />
             <h2 class="myname">Luciano Silva</h2>
@@ -86,19 +89,21 @@
             </li>
           </ul>
         </div>
-        <div class="right-container">
+        <div class="right-container" data-aos="fade-left">
           <div class="right-content">
             <div class="image">
               <img src="./img/photo.png" alt="" />
             </div>
           </div>
         </div>
-      </div>
-      <div class="text">
+      </section>
+
+      <section class="text" data-aos="fade-up">
         <h1 class="text-content">Latest works</h1>
         <p>Some of my work over time, as a Designer and front-end developer</p>
-      </div>
-      <div class="cards">
+      </section>
+
+      <section class="cards" data-aos="fade-up">
         <div class="card-project">
           <div class="image">
             <img src="img/blizzard.png" alt="Overwatch Blizzard Game Image" />
@@ -123,9 +128,94 @@
             <img src="img/pokemon.png" alt="Overwatch Blizzard Game Image" />
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="s-testimonials" data-aos="fade-up">
+        <div class="top">
+          <div class="text-content">
+            <h1>Testimonials</h1>
+            <p>Some of my work over time, as a Designer and front-end developer</p>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="slide-testimonials">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-depoimento">
+                <div class="user">
+                  <strong>@thaismaurin</strong>
+                  <img src="./img/linkedin.svg" alt="LinkedIn Icon" />
+                </div>
+                <p>
+                  Trabalhar com o Luciano foi uma experiência enriquecedora. É paciente, sempre disposto a
+                  ensinar. Me acolheu e auxiliou a entender o contexto do produto, de forma clara, detalhada e
+                  positiva. Tem uma vasta experiência para conectar pontos....
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-depoimento">
+                <div class="user">
+                  <strong>@alexandrealvaro</strong>
+                  <img src="./img/linkedin.svg" alt="LinkedIn Icon" />
+                </div>
+                <p>
+                  Uma das pessoas mais impressionantes que já conheci. Sem exageros. Quando conheci o Luciano,
+                  ele trabalhava como operador de projeção no Cinema, e desde aquela época já tinha um amplo
+                  conhecimento técnico. (sabe aquele perfil que ....
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-depoimento">
+                <div class="user">
+                  <strong>@marllon-bianchini</strong>
+                  <img src="./img/linkedin.svg" alt="LinkedIn Icon" />
+                </div>
+                <p>
+                  Luciano é um excelente profissional, se destaca pelo empenho e comprometimento, sempre
+                  disposto a garantir e entregar aquilo que foi combinado.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-depoimento">
+                <div class="user">
+                  <strong>@augusto-cesar-schuambach</strong>
+                  <img src="./img/linkedin.svg" alt="LinkedIn Icon" />
+                </div>
+                <p>Profissional super criativo e com ótimo relacionamento em equipe.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <p>2023 - Luciano Silva</p>
+        </footer>
+      </section>
     </div>
+
+    <!-- Swiper JS -->
     <script src="./js/plugins.js"></script>
     <script src="./js/all.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        easing: "easeOutQuart",
+      })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".slide-testimonials", {
+        slidesPerView: 3,
+        spaceBetween: 32,
+        pagination: {
+          el: ".s-testimonials .top .swiper-pagination",
+          clickable: true,
+        },
+      })
+    </script>
   </body>
 </html>
