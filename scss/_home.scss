@@ -80,6 +80,7 @@
     }
   }
   .card-project {
+    // border: solid 1px red;
     &:hover {
       .image {
         img {
@@ -99,6 +100,40 @@
         transition: transform 0.3s ease-in;
       }
     }
+  }
+  .btn-live {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 36px;
+    background-color: var(--primary700);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .btn-github {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 36px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--gray700);
+  }
+
+  .botoes {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 32px 0px 32px;
   }
   .cards {
     display: grid;
